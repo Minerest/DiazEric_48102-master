@@ -1,0 +1,9 @@
+Exception: STATUS_INTEGER_DIVIDE_BY_ZERO at eip=0040125F
+eax=00000005 ebx=0061CC9C ecx=00000000 edx=00000000 esi=612F26DE edi=611D8DB2
+ebp=0061CC78 esp=0061CC50 program=C:\Users\ericd\Desktop\C++\Homework\Chapter1\Ch1Prblm3\dist\Debug\Cygwin-Windows\ch1prblm3.exe, pid 7068, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0061CC78  0040125F (00000001, 0061CC9C, 20010108, 61007B2A)
+0061CD18  61007B8F (00000000, 0061CD74, 61006BC0, 00000000)
+End of stack trace
