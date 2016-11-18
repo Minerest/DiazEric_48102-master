@@ -201,6 +201,7 @@ int main(int argc, char** argv) {
                     if(endC == 'n' || endC == 'N'){
                          game = false;
                     }
+                    xMarksTheSpot();
                     break; //no use reading the entire file if they win...
                 }// end if
             }//close for      
@@ -216,36 +217,37 @@ void xMarksTheSpot (){
     int num = 0;
     char sp1 = 33;
     char sp2 = 126;
-    do{
-        for (int i = 0; i <= width; i++){
-            for (int j = 1; j <= width; j++){
-                
-                if (j == sp1){
+    for (int p = 0; p<150; p++){
+        
+        if (p%3 == 0){
+            for (int i = 0; i <= width; i++){
+                for (int j = 1; j <= width; j++){
 
-                    cout<<sp1;
-                }
-                else if (j == sp2) {
-                    cout<<sp2;
-                }
-                else if (j % 8 == 0){       //Spacing is just right for my sized screen
-                    cout<<" ";
+                    if (j == sp1){
+
+                        cout<<sp1;
+                    }
+                    else if (j == sp2) {
+                        cout<<sp2;
+                    }
+                    else if (j % 8 == 0){       //Spacing is just right for my sized screen
+                        cout<<" ";
+                    }
+
                 }
 
-            }
-
-            sp1+=1;
-            sp2-=1;
-            if (sp1 == 125){    //Make sure I'm only printing out readable characters
-                sp1 = 33;
-            }
-            if (sp2 == 33){
-                sp2 = 125;
-            }
-        }// close outermost forloop
-        num++;
-    } while (num < 40);
-    clrScn();
-    
+                sp1+=1;
+                sp2-=1;
+                if (sp1 == 125){    //Make sure I'm only printing out readable characters
+                    sp1 = 33;
+                }
+                if (sp2 == 33){
+                    sp2 = 125;
+                }
+            }// close outermost forloop
+        }
+    }
+    clrScn();    
 }
 void clrScn(){
     for (int j = 0; j < 30; j++){
